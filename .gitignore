@@ -22,3 +22,8 @@
 /yarn-error.log
 
 .byebug_history
+
+#for vim
+.DS_Store
+*~
+*.swp
