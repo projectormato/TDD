@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get
+  get root :to => 'tops#index'
   get 'admin/users', to:'admins#users'
   get 'admin', to:'admins#index'
   get 'admin/projects', to:'admins#projects'
