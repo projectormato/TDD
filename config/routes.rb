@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get
+  get 'admin/users', to:'admins#users'
+  get 'admin', to:'admins#index'
+  get 'admin/projects', to:'admins#projects'
+
   get '/projects', to: 'projects#index'
   get 'projects/show'
   get 'projects/tasks'
