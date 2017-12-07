@@ -15,8 +15,8 @@
       passward：<input type="text" name="pw" size="40">
     </p>
     <p>
-      <input type="submit" value="ログイン"><input type="submit"
-                                               value="パスワードを忘れた方はこちら">
+      <%= link_to "ログイン", :controller => "projects", :action => "index" %>
+      <input type="submit" value="パスワードを忘れた方はこちら">
     </p>
   </form>
 </div>
