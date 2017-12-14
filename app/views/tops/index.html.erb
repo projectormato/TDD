@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="index">
-  <h1>Task Ding Dong</h1>
+  <h1>Todo Doing Done</h1>
   <form action="">
     <p>
       username：<input type="text" name="id" size="40">
@@ -15,8 +15,10 @@
       passward：<input type="text" name="pw" size="40">
     </p>
     <p>
-      <%= link_to "ログイン", :controller => "projects", :action => "index" %>
-      <input type="submit" value="パスワードを忘れた方はこちら">
+    <!--<%= link_to "ログイン", :controller => "projects", :action => "index" %>-->
+    <input type="submit" value="ログイン" formaction="/projects" ></input>
+    <input type="submit" value="パスワードを忘れた方はこちら" ></input>
+
     </p>
   </form>
 </div>
