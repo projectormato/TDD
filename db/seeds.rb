@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Project.create({title:'プロジェクト1'})
+Project.create({title:'プロジェクト2'})
+Project.create({title:'プロジェクト3'})
+Project.create({title:'授業課題'})
+Project.create({title:'パーソナルタスク1'})
+
+
