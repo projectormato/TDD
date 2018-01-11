@@ -1,6 +1,4 @@
 class ProjectsController < ApplicationController
-  def tasks
-  end
 
   def index
     @projects = Project.all
