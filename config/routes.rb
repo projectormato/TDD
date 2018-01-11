@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   get 'admin/projects', to:'admins#projects'
 
   get '/projects', to: 'projects#index'
-  get 'projects/:id', to: 'projects#show'
-  get 'projects/show'
+  get 'projects/:id', to:'tasks#index'
   get 'projects/tasks', to:'tasks#index'
-  get 'projects/new'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
