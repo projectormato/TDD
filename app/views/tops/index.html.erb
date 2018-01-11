@@ -17,7 +17,8 @@
     <p>
     <!--<%= link_to "ログイン", :controller => "projects", :action => "index" %>-->
     <input type="submit" value="ログイン" formaction="/projects" ></input>
-    <input type="submit" value="パスワードを忘れた方はこちら" ></input>
+    <input type="submit" value="パスワードを忘れた方はこちら" ></input><br>
+    <%= link_to "管理者はこちら", :controller => "admins", :action => "index" %>
 
     </p>
   </form>

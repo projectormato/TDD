@@ -1,12 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <title>TDD:プロジェクト管理画面</title>
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0" >
+</head>
 <body>
-<h1>プロジェクト管理画面</h1>
-<ul>
-  <li>プロジェクト管理画面１</li>
-  <li>>プロジェクト管理画面2</li>
-</ul>
+<h1 class="title">Todo Doing Done</h1>
+<h2>プロジェクト管理画面</h2>
+<% @projects.each do |project| %>
+    <li><%= link_to project.title%></li>
+<% end %>
 </body>
 </html>
