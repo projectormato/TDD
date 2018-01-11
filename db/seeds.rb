@@ -12,4 +12,6 @@ Project.create({title:'プロジェクト3'})
 Project.create({title:'授業課題'})
 Project.create({title:'パーソナルタスク1'})
 
+Task.create({title:'タスク1'})
+Task.create({title:'タスク2'})
 
