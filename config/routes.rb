@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'admin/projects', to:'admins#projects'
 
   get '/projects', to: 'projects#index'
-  get 'projects/show'
+  get 'projects/:id', to:'projects#show'
   get 'projects/tasks'
   get 'projects/new'
 
