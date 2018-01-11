@@ -15,17 +15,13 @@
     </p>
   </form>
 
-  <nav>
-    <ul>
-      <% @projects.each do |project| %>
-      <li><%= project.title %></li>
-      <% end %>
-      <li><input type="checkbox" name="" value=""> <a href="/projects/tasks">プロジェクト1</a></li>
-      <!--<li><input type="checkbox" name="" value=""> <a href="">プロジェクト2</a></li>-->
-      <!--<li><input type="checkbox" name="" value=""> <a href="">プロジェクト3</a></li>-->
-      <!--<li><input type="checkbox" name="" value=""> <a href="">授業課題</a></li>-->
-      <!--<li><input type="checkbox" name="" value=""> <a href="">パーソナルタスク1</a></li>-->
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <% @projects.each do |project| %>
+        <li><%= link_to project.title, @project%></li>
+    <% end %>
+    <li><input type="checkbox" name="" value=""> <a href="/projects/tasks">プロジェクト1</a></li>
+  </ul>
+</nav>
 </body>
 </html>
