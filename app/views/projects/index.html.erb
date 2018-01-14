@@ -18,7 +18,7 @@
 <nav>
   <ul>
     <% @projects.each do |project| %>
-        <li><%= link_to project.title, projects_path(project.id)%></li>
+        <li><input type="checkbox" name="" value=""><%= link_to project.title, projects_path(project.id)%></li>
     <% end %>
   <li><input type="checkbox" name="" value=""> <a href="/projects/tasks">プロジェクト1</a></li>
   </ul>

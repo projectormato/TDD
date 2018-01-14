@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-
+  protect_from_forgery except: :index
   def index
     @projects = Project.all
   end
