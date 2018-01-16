@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'admin', to:'admins#index'
   get 'admin/projects', to:'admins#projects'
 
+  post '/yeah', to: 'projects#create'
   post '/projects', to: 'projects#index'
   get '/projects', to: 'projects#index'
   get '/projects/:id', to:'tasks#index'
