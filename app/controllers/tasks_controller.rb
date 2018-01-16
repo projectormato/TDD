@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    id = request.fullpath.split("/")[-1]
+    @tasks = Project.find(id).tasks
   end
 
 end
