@@ -19,7 +19,6 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    puts params[:id]
     Project.find(params.require(:project)[:id]).destroy
     redirect_to('/projects')
   end

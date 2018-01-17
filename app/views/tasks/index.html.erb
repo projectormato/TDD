@@ -16,13 +16,19 @@
     <%= f.submit "作成" %>
 <% end %>
 
-  <nav>
-    <ul>
-      <% @tasks.each do |task| %>
-      <li><input type="checkbox" name="" value=""><%= task.title %></li>
+<nav>
+  <ul>
+    <% @tasks.each do |task| %>
+      <%= form_for @task, :url => request.fullpath+'/delete' do |f| %>
+        <li><input type="checkbox" name="" value=""><%= task.title %>
+          <%= f.hidden_field :id, :value => task.id %>
+          <%= f.submit "削除"%>
+          <%= f.submit "完了！"%>
+        </li>
       <% end %>
-    </ul>
-  </nav>
+    <% end %>
+</ul>
+</nav>
 
   <%=link_to 'プロジェクト一覧に戻る', projects_path %>
 </body>

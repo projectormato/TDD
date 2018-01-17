@@ -7,8 +7,14 @@ class TasksController < ApplicationController
 
   def create
     id = request.fullpath.split("/")[-1]
-    p params
     Task.create(params.require(:task).permit(:title, :project_id))
+    redirect_to('/projects/'+id)
+  end
+
+  def destroy
+    p params[:task]
+    Task.find(params.require(:task)[:id]).destroy
+    id = request.fullpath.split("/")[-2]
     redirect_to('/projects/'+id)
   end
 

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/projects', to: 'projects#index'
   get '/projects/:id', to:'tasks#index'
   post 'projects/:id', to:'tasks#create'
+  post 'projects/:id/delete', to:'tasks#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
