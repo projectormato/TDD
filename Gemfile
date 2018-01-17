@@ -1,3 +1,5 @@
+ruby '2.4.0'
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -32,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'pg'
 end
 
 group :development, :test do
