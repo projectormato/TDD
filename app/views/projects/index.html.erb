@@ -11,15 +11,21 @@
   <h2>プロジェクト一覧</h2>
   <%= form_for @project, :url => '/yeah' do |f| %>
     <%= f.label :title, "プロジェクト新規作成：" %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title , style: 'background-color: Aquamarine' %>
     <%= f.submit "作成" %>
   <% end %>
 
 <nav>
   <ul>
     <% @projects.each do |project| %>
-        <li><input type="checkbox" name="" value=""><%= link_to project.title, projects_path+"/"+project.id.to_s%></li>
+      <%= form_for @project, :url => '/oh' do |f| %>
+        <li><input type="checkbox" name="" value=""><%= link_to project.title, projects_path+"/"+project.id.to_s%>
+          <%= f.hidden_field :id, :value => project.id %>
+          <%= f.submit "削除"%>
+        </li>
+      <% end %>
     <% end %>
+  </ul>
 </nav>
 </body>
 </html>

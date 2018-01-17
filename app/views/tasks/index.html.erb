@@ -8,19 +8,22 @@
   <div class="title">
     <h1>Todo Doing Done</h1>
   </div>
-  <h2>タスク</h2>
-  <form action="">
-    <p>
-      <input type="submit" value="タスク追加"><input type="submit"value="タスク編集"> <input type="submit" value="タスク削除">
-    </p>
-  </form>
+  <h2>タスク一覧</h2>
+  <%= form_for @task, :url => {:action => :create} do |f| %>
+    <%= f.label :title, "新規作成：" %>
+    <%= f.text_field :title , style: 'background-color: Aquamarine' %>
+    <%= f.hidden_field :project_id, :value => @id %>
+    <%= f.submit "作成" %>
+<% end %>
 
   <nav>
     <ul>
       <% @tasks.each do |task| %>
-      <li><%= task.title %></li>
+      <li><input type="checkbox" name="" value=""><%= task.title %></li>
       <% end %>
     </ul>
   </nav>
+
+  <%=link_to 'プロジェクト一覧に戻る', projects_path %>
 </body>
 </html>

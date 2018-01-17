@@ -14,8 +14,13 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    # binding.pry
     Project.create(params.require(:project).permit(:title))
+    redirect_to('/projects')
+  end
+
+  def destroy
+    puts params[:id]
+    Project.find(params.require(:project)[:id]).destroy
     redirect_to('/projects')
   end
 end
